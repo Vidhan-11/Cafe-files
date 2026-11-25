@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#3E2723">
+  <meta name="description" content="Explore coffee, desserts, sandwiches, and cold beverages at Brew Haven Cafe in Dehradun.">
+  <title>Our Menu | Brew Haven Cafe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="brand" href="index.html#home" aria-label="Brew Haven Cafe home">
+        <span class="brand-mark" aria-hidden="true">B</span>
+        <span class="brand-name">Brew Haven<span>C A F E</span></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="primary-menu">
+        <a href="index.html#home">Home</a>
+        <a href="#coffee">Our menu</a>
+        <a href="about.html#history">Our story</a>
+        <a href="gallery.html#gallery">Gallery</a>
+        <a href="index.html#reviews">Reviews</a>
+        <a class="nav-cta" href="contact.html#contact-details">Contact <span aria-hidden="true">↗</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" class="menu-page">
+    <section class="menu-page-hero" aria-labelledby="menu-title">
+      <div class="container">
+        <p class="eyebrow">GOOD THINGS, MADE FRESH</p>
+        <h1 id="menu-title">A menu for <em>the moment.</em></h1>
+        <p>Something comforting, something new, and always something made with care.</p>
+        <nav class="menu-shortcuts" aria-label="Menu categories">
+          <a href="#coffee">Coffee <span aria-hidden="true">↓</span></a>
+          <a href="#desserts">Desserts <span aria-hidden="true">↓</span></a>
+          <a href="#sandwiches">Sandwiches <span aria-hidden="true">↓</span></a>
+          <a href="#cold-beverages">Cold beverages <span aria-hidden="true">↓</span></a>
+        </nav>
+      </div>
+    </section>
+
+    <div class="container menu-page-content">
+      <section class="menu-category" id="coffee" aria-labelledby="coffee-title">
+        <div class="menu-category-heading">
+          <span class="menu-category-number">01</span>
+          <div><p class="eyebrow">THE DAILY RITUAL</p><h2 id="coffee-title">Coffee</h2></div>
+          <p>Thoughtfully sourced beans, carefully brewed, and best enjoyed right here.</p>
+        </div>
+        <div class="menu-items">
+          <article class="menu-item"><div><h3>Espresso Royale</h3><p>Rich and concentrated with deep chocolate notes and a velvety finish.</p></div><span class="menu-price">₹180</span></article>
+          <article class="menu-item"><div><h3>Americano</h3><p>A smooth double espresso opened up with hot water.</p></div><span class="menu-price">₹190</span></article>
+          <article class="menu-item"><div><h3>Hazelnut Cappuccino</h3><p>Espresso, cloud-soft milk foam, and roasted hazelnut.</p></div><span class="menu-price">₹250</span></article>
+          <article class="menu-item"><div><h3>Caramel Macchiato</h3><p>Layered espresso and steamed milk finished with caramel.</p></div><span class="menu-price">₹260</span></article>
+          <article class="menu-item"><div><h3>Mocha Delight</h3><p>A comforting meeting of premium cocoa and espresso.</p></div><span class="menu-price">₹270</span></article>
+          <article class="menu-item"><div><h3>Vanilla Latte</h3><p>Silky steamed milk, espresso, and a hint of vanilla.</p></div><span class="menu-price">₹230</span></article>
+        </div>
+      </section>
+
+      <section class="menu-category" id="desserts" aria-labelledby="desserts-title">
+        <div class="menu-category-heading">
+          <span class="menu-category-number">02</span>
+          <div><p class="eyebrow">A LITTLE SOMETHING SWEET</p><h2 id="desserts-title">Desserts</h2></div>
+          <p>Baked treats and sweet finishes, made for sharing—or not.</p>
+        </div>
+        <div class="menu-items">
+          <article class="menu-item"><div><h3>Chocolate Brownie</h3><p>Fudgy in the middle with a delicate crisp top.</p></div><span class="menu-price">₹169</span></article>
+          <article class="menu-item"><div><h3>Blueberry Cheesecake</h3><p>Rich, creamy cheesecake with a bright berry finish.</p></div><span class="menu-price">₹229</span></article>
+          <article class="menu-item"><div><h3>Red Velvet Cake</h3><p>Soft cocoa sponge layered with smooth cream cheese frosting.</p></div><span class="menu-price">₹189</span></article>
+          <article class="menu-item"><div><h3>Butter Croissant</h3><p>Flaky, golden layers, baked fresh each morning.</p></div><span class="menu-price">₹149</span></article>
+        </div>
+      </section>
+
+      <section class="menu-category" id="sandwiches" aria-labelledby="sandwiches-title">
+        <div class="menu-category-heading">
+          <span class="menu-category-number">03</span>
+          <div><p class="eyebrow">MADE FOR THE MIDDLE OF THE DAY</p><h2 id="sandwiches-title">Sandwiches</h2></div>
+          <p>Fresh, filling favorites for a quick lunch or a slower afternoon.</p>
+        </div>
+        <div class="menu-items">
+          <article class="menu-item"><div><h3>Mediterranean Panini</h3><p>Grilled vegetables, herbs, and a little Mediterranean sunshine.</p></div><span class="menu-price">₹319</span></article>
+          <article class="menu-item"><div><h3>Smoky Paneer Sandwich</h3><p>Smoky paneer, crisp vegetables, and our house chutney.</p></div><span class="menu-price">₹299</span></article>
+          <article class="menu-item"><div><h3>Avocado Toast</h3><p>Ripe avocado on toasted bread with a savory finish.</p></div><span class="menu-price">₹249</span></article>
+          <article class="menu-item"><div><h3>Garden Veggie Wrap</h3><p>Crunchy seasonal vegetables wrapped up with a creamy dressing.</p></div><span class="menu-price">₹229</span></article>
+        </div>
+      </section>
+
+      <section class="menu-category" id="cold-beverages" aria-labelledby="cold-beverages-title">
+        <div class="menu-category-heading">
+          <span class="menu-category-number">04</span>
+          <div><p class="eyebrow">COOL, CALM & REFRESHING</p><h2 id="cold-beverages-title">Cold Beverages</h2></div>
+          <p>Chilled sips, slow-steeped favorites, and a refreshing pick-me-up.</p>
+        </div>
+        <div class="menu-items">
+          <article class="menu-item"><div><h3>Cold Brew Reserve</h3><p>Steeped for 18 hours for a bold, smooth, naturally sweet cup.</p></div><span class="menu-price">₹240</span></article>
+          <article class="menu-item"><div><h3>Iced Vanilla Latte</h3><p>Espresso, cold milk, and vanilla over ice.</p></div><span class="menu-price">₹250</span></article>
+          <article class="menu-item"><div><h3>Classic Iced Coffee</h3><p>Our chilled coffee favorite, blended smooth and served over ice.</p></div><span class="menu-price">₹220</span></article>
+          <article class="menu-item"><div><h3>Seasonal Fruit Smoothie</h3><p>A bright blend of seasonal fruit, made fresh to order.</p></div><span class="menu-price">₹230</span></article>
+        </div>
+      </section>
+    </div>
+
+    <section class="menu-page-cta">
+      <div class="container menu-page-cta-inner">
+        <div><p class="eyebrow">SOMETHING SOUND GOOD?</p><h2>We’ll put the kettle on.</h2></div>
+        <a class="button button-primary" href="contact.html#contact-details">Plan your visit <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <a class="brand footer-brand" href="index.html#home" aria-label="Brew Haven Cafe home">
+        <span class="brand-mark" aria-hidden="true">B</span>
+        <span class="brand-name">Brew Haven<span>C A F E</span></span>
+      </a>
+      <p class="footer-tagline">Crafted coffee.<br><em>Inspired moments.</em></p>
+      <div class="footer-contact"><span>COME SAY HELLO</span><a href="mailto:hello@brewhavencafe.com">hello@brewhavencafe.com</a><a href="tel:+919876543210">+91 98765 43210</a></div>
+      <div class="footer-social"><span>FOLLOW ALONG</span><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="current-year">2026</span> Brew Haven Cafe. Made with care.</span><a href="#main">Back to the top ↑</a></div>
+  </footer>
+</body>
+</html>
