@@ -1,0 +1,137 @@
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+if (menuToggle && navLinks) {
+  const closeMenu = () => {
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute("aria-label", "Open navigation menu");
+    navLinks.classList.remove("is-open");
+  };
+
+  menuToggle.addEventListener("click", () => {
+    const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+    menuToggle.setAttribute("aria-expanded", String(!isOpen));
+    menuToggle.setAttribute("aria-label", isOpen ? "Open navigation menu" : "Close navigation menu");
+    navLinks.classList.toggle("is-open", !isOpen);
+  });
+
+  navLinks.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", closeMenu);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && menuToggle.getAttribute("aria-expanded") === "true") {
+      closeMenu();
+      menuToggle.focus();
+    }
+  });
+}
+
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+document.querySelectorAll('a[href^="#"]').forEach((link) => {
+  link.addEventListener("click", (event) => {
+    const targetId = link.getAttribute("href").slice(1);
+    const target = document.getElementById(targetId);
+
+    if (!target || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
+      return;
+    }
+
+    event.preventDefault();
+    history.pushState(null, "", `#${targetId}`);
+    target.scrollIntoView({
+      behavior: prefersReducedMotion.matches ? "auto" : "smooth",
+      block: "start"
+    });
+  });
+});
+
+const animateButton = (button) => {
+  if (prefersReducedMotion.matches || typeof button.animate !== "function") {
+    return;
+  }
+
+  button.animate(
+    [
+      { transform: "scale(1)" },
+      { transform: "scale(.96)" },
+      { transform: "scale(1)" }
+    ],
+    { duration: 180, easing: "ease-out" }
+  );
+};
+
+document.querySelectorAll(".button, button, input[type='submit']").forEach((button) => {
+  button.addEventListener("click", () => animateButton(button));
+});
+
+document.querySelectorAll("form.contact-form, form[data-contact-form], form#contact-form").forEach((form) => {
+  ["name", "email", "message"].forEach((fieldName) => {
+    const field = form.querySelector(`[name="${fieldName}"]`);
+    if (field) {
+      field.required = true;
+    }
+  });
+
+  const emailField = form.querySelector('[name="email"]');
+  if (emailField instanceof HTMLInputElement) {
+    emailField.type = "email";
+  }
+
+  const phoneField = form.querySelector('[name="phone"]');
+  const validatePhone = () => {
+    if (!phoneField) {
+      return;
+    }
+
+    const digits = phoneField.value.replace(/\D/g, "");
+    phoneField.setCustomValidity(
+      phoneField.value.trim() && (digits.length < 7 || digits.length > 15)
+        ? "Enter a valid phone number."
+        : ""
+    );
+  };
+
+  if (phoneField) {
+    phoneField.addEventListener("input", validatePhone);
+    validatePhone();
+  }
+
+  form.addEventListener("invalid", (event) => {
+    event.target.setAttribute("aria-invalid", "true");
+  }, true);
+
+  form.addEventListener("input", (event) => {
+    if (event.target.willValidate && event.target.checkValidity()) {
+      event.target.removeAttribute("aria-invalid");
+    }
+  });
+
+  form.addEventListener("submit", (event) => {
+    validatePhone();
+    if (!form.checkValidity()) {
+      event.preventDefault();
+      form.reportValidity();
+      return;
+    }
+
+    event.preventDefault();
+    const formData = new FormData(form);
+    const message = [
+      `Name: ${formData.get("name")}`,
+      `Email: ${formData.get("email")}`,
+      `Phone: ${formData.get("phone") || "Not provided"}`,
+      "",
+      "Message:",
+      formData.get("message")
+    ].join("\n");
+    const subject = encodeURIComponent("Brew Haven Cafe website enquiry");
+    window.location.href = `mailto:hello@brewhavencafe.com?subject=${subject}&body=${encodeURIComponent(message)}`;
+  });
+});
+
+const year = document.querySelector("#current-year");
+if (year) {
+  year.textContent = String(new Date().getFullYear());
+}
