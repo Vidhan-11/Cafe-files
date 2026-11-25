@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#3E2723">
+  <meta name="description" content="Take a look inside Brew Haven Cafe: our coffee, cozy spaces, and freshly baked treats.">
+  <title>Gallery | Brew Haven Cafe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="brand" href="index.html#home" aria-label="Brew Haven Cafe home">
+        <span class="brand-mark" aria-hidden="true">B</span>
+        <span class="brand-name">Brew Haven<span>C A F E</span></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="primary-menu">
+        <a href="index.html#home">Home</a>
+        <a href="menu.html#coffee">Our menu</a>
+        <a href="about.html#history">Our story</a>
+        <a href="#gallery">Gallery</a>
+        <a href="index.html#reviews">Reviews</a>
+        <a class="nav-cta" href="contact.html#contact-details">Contact <span aria-hidden="true">↗</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="gallery-page-hero" aria-labelledby="gallery-title">
+      <div class="container">
+        <p class="eyebrow">A FEELING, IN FRAMES</p>
+        <h1 id="gallery-title">Come on in.<br><em>Stay a little.</em></h1>
+        <p>A peek at the cups, corners, and little moments that make Brew Haven feel like Brew Haven.</p>
+      </div>
+    </section>
+
+    <section class="gallery-section" id="gallery" aria-labelledby="gallery-grid-title">
+      <div class="container">
+        <div class="gallery-heading">
+          <p class="eyebrow">LIFE AT BREW HAVEN</p>
+          <h2 id="gallery-grid-title">Made for <em>the good moments.</em></h2>
+        </div>
+        <div class="gallery-grid">
+          <figure class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1100&q=85" alt="Warm light falling across the cafe's cozy interior" loading="lazy">
+            <figcaption>A cozy corner to call your own</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=900&q=85" alt="Welcoming tables and seating inside a modern cafe" loading="lazy">
+            <figcaption>Room for one more</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=85" alt="Coffee being prepared by hand" loading="lazy">
+            <figcaption>Every cup, made with care</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=1100&q=85" alt="Freshly poured coffee ready to be enjoyed" loading="lazy">
+            <figcaption>Your daily pause</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=900&q=85" alt="Golden, flaky pastries fresh from the bakery" loading="lazy">
+            <figcaption>Fresh from the bakery</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=900&q=85" alt="A chilled glass of coffee with ice" loading="lazy">
+            <figcaption>Slow-steeped and chilled</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1442975631115-c4f7b05b8a2c?auto=format&fit=crop&w=900&q=85" alt="Coffee beans ready to be ground and brewed" loading="lazy">
+            <figcaption>Good things start with good beans</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=1100&q=85" alt="Cafe guests enjoying time together over coffee" loading="lazy">
+            <figcaption>Better when shared</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-page-cta">
+      <div class="container menu-page-cta-inner">
+        <div><p class="eyebrow">THE BEST PART IS BEING HERE</p><h2>Make a moment with us.</h2></div>
+        <a class="button button-primary" href="contact.html#contact-details">Find your way here <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <a class="brand footer-brand" href="index.html#home" aria-label="Brew Haven Cafe home">
+        <span class="brand-mark" aria-hidden="true">B</span>
+        <span class="brand-name">Brew Haven<span>C A F E</span></span>
+      </a>
+      <p class="footer-tagline">Crafted coffee.<br><em>Inspired moments.</em></p>
+      <div class="footer-contact"><span>COME SAY HELLO</span><a href="mailto:hello@brewhavencafe.com">hello@brewhavencafe.com</a><a href="tel:+919876543210">+91 98765 43210</a></div>
+      <div class="footer-social"><span>FOLLOW ALONG</span><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="current-year">2026</span> Brew Haven Cafe. Made with care.</span><a href="#main">Back to the top ↑</a></div>
+  </footer>
+</body>
+</html>
